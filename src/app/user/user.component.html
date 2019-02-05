@@ -2,16 +2,18 @@
   <div class="container">
 
     <div class="row">
-        <blockquote class="text-center text-lg">
-            <p>{{info.avatar_url}}</p>
-            <p>{{info.login}}<p>
-            <p>{{info.public_repos}}<p>
-            <p>{{info.followers}}<p>
-            <p>{{info.following}}<p>
-            <p>{{info.location}}<p>
-            <footer><cite>{{info. html_url}}</cite></footer>
+        <!-- <blockquote class="text-center text-lg"> -->
+            <p>{{repository.avatar_url}}</p>
+            <p>{{repository.name}}<p>
+            <p>{{repository.public_repos}}<p>
+            <p>{{repository.followers}}<p>
+            <p>{{repository.following}}<p>
+            <p>{{repository.location}}<p>
+         <p>{{repository. html_url}}</p><br><br><br>
+            <p>{{repository.completeDate}}</p>
 
-        </blockquote>
+        <!-- </blockquote> -->
     </div>
     
 </div>
+<app-user-form></app-user-form>
