@@ -11,7 +11,9 @@ export class RepositoryRequestService {
     this.repository = new Repository("","", 0, 0, 0, "", "", new Date(2019, 2, 5));
   }
 
-  repositoryRequest() {
+  repositoryRequest(userName) {
+var userInput=userName;
+console.log(userInput);
 
     interface ApiResponse {
       avatar_url: string;
@@ -26,7 +28,7 @@ export class RepositoryRequestService {
 
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>("https://api.github.com/users/imalexianne").toPromise().then(response => {
+      this.http.get<ApiResponse>("https://api.github.com/users/"+userInput).toPromise().then(response => {
 
         this.repository.avatar_url = response.avatar_url
         this.repository.name = response.name

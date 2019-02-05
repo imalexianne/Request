@@ -1,15 +1,18 @@
-
+<div class="input-form">
+        <input class="input-field" type="text" placeholder="Username" [(ngModel)]="userName">
+ <button (click)="submitInput()">Search</button>
+    </div>
   <div class="container">
 
     <div class="row">
         <!-- <blockquote class="text-center text-lg"> -->
-            <p>{{repository.avatar_url}}</p>
+            <img src={{repository.avatar_url}}>
             <p>{{repository.name}}<p>
-            <p>{{repository.public_repos}}<p>
-            <p>{{repository.followers}}<p>
-            <p>{{repository.following}}<p>
-            <p>{{repository.location}}<p>
-         <p>{{repository. html_url}}</p><br><br><br>
+            <p>Repositories:{{repository.public_repos}}<p>
+            <p>Followers:{{repository.followers}}<p>
+            <p>Following:{{repository.following}}<p>
+            <p>Location:{{repository.location}}<p>
+         <p> Link to repositories:  {{repository.html_url}}</p><br><br><br>
             <p>{{repository.completeDate}}</p>
 
         <!-- </blockquote> -->

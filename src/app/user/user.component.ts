@@ -11,6 +11,11 @@ import {RepositoryRequestService} from '../repository-http/repository-request.se
 })
 export class UserComponent implements OnInit {
 repository:Repository;
+userName="";
+submitInput(){
+  // this.repositoryService
+  console.log(this.userName)
+}
   constructor(private repositoryService:RepositoryRequestService) { }
 
   ngOnInit() { 
