@@ -1,31 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Info} from '../info-class/info';
 
+import {Repository} from '../repository';
+import {RepositoryRequestService} from '../repository-http/repository-request.service'
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
+  providers:[RepositoryRequestService],
 })
 export class UserComponent implements OnInit {
-info:Info;
-  constructor(private http:HttpClient) { }
+repository:Repository;
+  constructor(private repositoryService:RepositoryRequestService) { }
 
   ngOnInit() { 
-    interface ApiResponse{
-      avatar_url :string;
-         login:string;
-         public_repos:number;
-         followers:number;
-         following:number;
-         location:string;
-        html_url:string;
+    // interface ApiResponse{
+    //   avatar_url :string;
+    //      login:string;
+    //      public_repos:number;
+    //      followers:number;
+    //      following:number;
+    //      location:string;
+    //     html_url:string;
     
-       }
-       this.http.get<ApiResponse>("https://api.github.com/users/imalexianne?access_token=f6fab55daca40d78b55a350dd2fe8927a8acd169").subscribe(data=>{
-        this.info= new Info(data.avatar_url,data.login,data.public_repos,data.followers,data.following,data.location,data.html_url)
-      })
+    //    }
+      // 
+      
+      this.repositoryService.repositoryRequest()
+      this.repository=this.repositoryService.repository
     }
   
   }
