@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Project description
 A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 
-##Project setup instructions
+## Project setup instructions
 
 This project was generated with Angular CLI version 7.2
 
@@ -17,8 +17,8 @@ Run ng e2e to execute the end-to-end tests via Protractor.
 
 To get more help on the Angular CLI use ng help or go check out the Angular CLI README.
 
-##Link to live site on Github Pages
+## Link to live site on Github Pages
 https://github.com/imalexianne/Request
 
-##copyright and license information
+##Copyright and license information
 This project is licensed under the MIT License
