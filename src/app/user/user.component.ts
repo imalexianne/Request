@@ -14,7 +14,8 @@ repository:Repository;
 userName="";
 submitInput(){
   // this.repositoryService
-  console.log(this.userName)
+  //console.log(this.userName)
+  this.repositoryService.repositoryRequest(this.userName)
 }
   constructor(private repositoryService:RepositoryRequestService) { }
 
@@ -31,7 +32,7 @@ submitInput(){
     //    }
       // 
       
-      this.repositoryService.repositoryRequest()
+      this.repositoryService.repositoryRequest("imalexianne")
       this.repository=this.repositoryService.repository
     }
   

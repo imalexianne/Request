@@ -13,7 +13,7 @@ export class RepositoryRequestService {
 
   repositoryRequest(userName) {
 var userInput=userName;
-console.log(userInput);
+
 
     interface ApiResponse {
       avatar_url: string;
@@ -28,7 +28,7 @@ console.log(userInput);
 
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>("https://api.github.com/users/"+userInput).toPromise().then(response => {
+      this.http.get<ApiResponse>('https://api.github.com/users/' + userInput).toPromise().then(response => {
 
         this.repository.avatar_url = response.avatar_url
         this.repository.name = response.name
@@ -52,8 +52,8 @@ console.log(userInput);
           this.repository.public_repos = 0
           this.repository.followers = 0
           this.repository.following = 0
-          this.repository.location = "pppp"
-          this.repository.html_url = "ttttttt"
+          this.repository.location = "oooo"
+          this.repository.html_url = "oooo"
           reject(error)
         }
       )
